@@ -27,7 +27,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-3">
-                    <label className="input input-bordered flex items-center gap-2 rounded-3xl hidden md:flex lg:flex">
+                    <label className="input input-bordered items-center gap-2 rounded-3xl hidden md:flex lg:flex">
                     <CiSearch></CiSearch>
                         <input  type="text" className="grow" placeholder="Search" />
                     </label>
