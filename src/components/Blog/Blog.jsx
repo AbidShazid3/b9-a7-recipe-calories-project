@@ -6,14 +6,14 @@ import Ingredient from '../Ingredient/Ingredient';
 
 const Blog = ({ blog }) => {
     const { recipe_image, recipe_name, short_description, ingredients, preparing_time, calories } = blog;
-    console.log(blog);
+    
     const displayIngredients = ingredients.slice(0, 3);
 
     return (
         <div className=''>
-            <div className="card  bg-base-100 shadow-xl">
+            <div className="card bg-base-100 shadow-xl">
                 <figure className="px-6 pt-6">
-                    <img src={recipe_image} alt="" className="rounded-xl" />
+                    <img src={recipe_image} alt="" className="rounded-xl h-52" />
                 </figure>
                 <div className="card-body">
                     <h2 className="text-xl  font-semibold">{recipe_name}</h2>
@@ -36,7 +36,7 @@ const Blog = ({ blog }) => {
                         <FaFire></FaFire>
                         <p>{calories}</p>
                     </div>
-                    <button className="btn bg-green-500">Buy Now</button>
+                    <button className="btn bg-green-500">Want to Cook</button>
                 </div>
             </div>
         </div>

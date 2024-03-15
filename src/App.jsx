@@ -17,7 +17,7 @@ function App() {
             <h1 className='text-4xl font-semibold mb-2'>Our Recipes</h1>
             <p>The recipes you’ll find here are inspired by local, seasonal ingredients, made from scratch, and either <br /> created by us or adapted from recipes that have inspired us.</p>
           </div>
-          <div className='flex mt-10'>
+          <div className='md:flex lg:flex mt-10 gap-7'>
             <Blogs></Blogs>
             <Carts></Carts>
           </div>

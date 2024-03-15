@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 
 const Ingredient = ({ingredient}) => {
-    console.log(ingredient);
+    
     return (
-        <div>
-            <li>{ingredient}</li>
+        <div className='mb-1'>
+            <li> {ingredient}</li>
         </div>
     );
 };

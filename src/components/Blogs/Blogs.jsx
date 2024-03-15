@@ -12,7 +12,7 @@ const Blogs = () => {
     } , []);
 
     return (
-        <div className="flex-1 grid grid-cols-2 gap-6">
+        <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-6">
             {
                 blogs.map(blog=> <Blog 
                     key={blog.recipe_id}

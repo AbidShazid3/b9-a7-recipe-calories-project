@@ -2,8 +2,8 @@
 
 const Carts = () => {
     return (
-        <div className="">
-            <h1 className="text-5xl">hello</h1>
+        <div className="w-1/3">
+            <h1 className="text-2xl">Want to cook: </h1>
         </div>
     );
 };
