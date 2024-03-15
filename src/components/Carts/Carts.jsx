@@ -2,8 +2,8 @@
 
 const Carts = () => {
     return (
-        <div>
-            
+        <div className="">
+            <h1 className="text-5xl">hello</h1>
         </div>
     );
 };
