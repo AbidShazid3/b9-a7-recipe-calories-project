@@ -13,8 +13,9 @@ const Carts = ({ bookmarks }) => {
                         <tr>
                             <th></th>
                             <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Time</th>
+                            <th>Calories</th>
+                            <th></th>
                         </tr>
                     </thead>
                 </table>

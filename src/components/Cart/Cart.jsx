@@ -18,11 +18,11 @@ const Cart = ({ bookmark }) => {
                     </thead> */}
                     <tbody>
                         <tr>
-                            <th>1</th>
+                            {/* <th>1</th> */}
                             <td>{recipe_name}</td>
                             <td>{preparing_time}</td>
                             <td>{calories}</td>
-                            <button></button>
+                            <button className="btn btn-sm bg-green-500 rounded-3xl mt-1">Preparing</button>
                         </tr> 
                     </tbody>
                 </table>
