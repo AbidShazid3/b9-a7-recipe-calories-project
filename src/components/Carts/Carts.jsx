@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import Cart from '../Cart/Cart';
 
 const Carts = ({ bookmarks }) => {
-    console.log(bookmarks);
+    
     return (
         <div className="w-1/3">
             <div>
@@ -20,9 +20,10 @@ const Carts = ({ bookmarks }) => {
                     </thead>
                 </table>
                 {
-                    bookmarks.map((bookmark) => <Cart
-                        key={bookmark.recipe_id}
-                        bookmark={bookmark}
+                    bookmarks.map((bookmark, idx) => <Cart
+                        key={idx} 
+                        idx={idx} 
+                        bookmark={bookmark} 
                     ></Cart>)
                 }
             </div>

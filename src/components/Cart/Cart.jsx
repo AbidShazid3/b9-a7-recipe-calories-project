@@ -1,24 +1,15 @@
 import PropTypes from 'prop-types';
 
-const Cart = ({ bookmark }) => {
+const Cart = ({ bookmark, idx }) => {
+    console.log(bookmark.recipe_id);
     const { recipe_name, preparing_time, calories } = bookmark;
-    console.log(bookmark);
     return (
         <div>
             <div className="overflow-x-auto">
                 <table className="table">
-                    {/* head */}
-                    {/* <thead>
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
-                        </tr>
-                    </thead> */}
                     <tbody>
                         <tr>
-                            {/* <th>1</th> */}
+                            <th>{idx + 1}</th>
                             <td>{recipe_name}</td>
                             <td>{preparing_time}</td>
                             <td>{calories}</td>
@@ -33,6 +24,7 @@ const Cart = ({ bookmark }) => {
 
 Cart.propTypes = {
     bookmark: PropTypes.object,
+    idx: PropTypes.number,
 }
 
 export default Cart;

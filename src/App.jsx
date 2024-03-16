@@ -6,12 +6,19 @@ import Blogs from './components/Blogs/Blogs'
 import Carts from './components/Carts/Carts'
 import Navbar from './components/Navbar/Navbar'
 
+
 function App() {
   const [bookmarks, setBookmarks] = useState([]);
 
-  const handleWantCook =(blog)=>{
-    console.log('cook click');
-    setBookmarks([...bookmarks, blog]);
+  const handleWantCook = (blog) => {
+    const isExist = bookmarks.find(item => item.recipe_id === blog.recipe_id);
+    if (!isExist) {
+      setBookmarks([...bookmarks, blog]);
+    }
+    else {
+      alert("already exist");
+    }
+
   }
 
 
@@ -30,6 +37,7 @@ function App() {
             <Carts bookmarks={bookmarks}></Carts>
           </div>
         </div>
+
       </div>
     </>
   )
