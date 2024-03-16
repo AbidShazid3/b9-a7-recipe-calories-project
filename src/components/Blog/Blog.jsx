@@ -4,7 +4,7 @@ import { FaFire } from "react-icons/fa";
 import Ingredient from '../Ingredient/Ingredient';
 
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleWantCook }) => {
     const { recipe_image, recipe_name, short_description, ingredients, preparing_time, calories } = blog;
     
     const displayIngredients = ingredients.slice(0, 3);
@@ -20,7 +20,7 @@ const Blog = ({ blog }) => {
                     <p className='pb-6 border-b-2'>{short_description}</p>
                     <div className='mt-6'>
                         <h3 className='text-lg font-semibold'>Ingredients: {ingredients.length}</h3>
-                        <ul className='p-4'>
+                        <ul className='p-4 list-disc'>
                             {
                                 displayIngredients.map((ingredient, idx)=> <Ingredient 
                                 key={idx}
@@ -36,7 +36,7 @@ const Blog = ({ blog }) => {
                         <FaFire></FaFire>
                         <p>{calories}</p>
                     </div>
-                    <button className="btn bg-green-500">Want to Cook</button>
+                    <button onClick={()=>handleWantCook(blog)} className="btn bg-green-500">Want to Cook</button>
                 </div>
             </div>
         </div>
@@ -45,6 +45,7 @@ const Blog = ({ blog }) => {
 
 Blog.propTypes = {
     blog: PropTypes.object,
+    handleWantCook: PropTypes.func,
 }
 
 export default Blog;

@@ -1,4 +1,5 @@
 
+import { useState } from 'react'
 import './App.css'
 import Banner from './components/Banner/Banner'
 import Blogs from './components/Blogs/Blogs'
@@ -6,6 +7,13 @@ import Carts from './components/Carts/Carts'
 import Navbar from './components/Navbar/Navbar'
 
 function App() {
+  const [bookmarks, setBookmarks] = useState([]);
+
+  const handleWantCook =(blog)=>{
+    console.log('cook click');
+    setBookmarks([...bookmarks, blog]);
+  }
+
 
   return (
     <>
@@ -18,8 +26,8 @@ function App() {
             <p>The recipes you’ll find here are inspired by local, seasonal ingredients, made from scratch, and either <br /> created by us or adapted from recipes that have inspired us.</p>
           </div>
           <div className='md:flex lg:flex mt-10 gap-7'>
-            <Blogs></Blogs>
-            <Carts></Carts>
+            <Blogs handleWantCook={handleWantCook}></Blogs>
+            <Carts bookmarks={bookmarks}></Carts>
           </div>
         </div>
       </div>
