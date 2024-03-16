@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 
-const Cart = ({ bookmark, idx, handleCurrentlyCooking }) => {
-    const { recipe_name, preparing_time, calories } = bookmark;
+const NewCart = ({secondCart, idx}) => {
+    const { recipe_name, preparing_time, calories } = secondCart;
+    
     return (
         <div>
             <div className="overflow-x-auto">
@@ -12,11 +13,7 @@ const Cart = ({ bookmark, idx, handleCurrentlyCooking }) => {
                             <td>{recipe_name}</td>
                             <td>{preparing_time}</td>
                             <td>{calories}</td>
-                            <button
-                                onClick={() => handleCurrentlyCooking(bookmark)}
-
-                                className="btn btn-sm bg-green-500 rounded-3xl mt-1">Preparing</button>
-                        </tr>
+                        </tr> 
                     </tbody>
                 </table>
             </div>
@@ -24,10 +21,9 @@ const Cart = ({ bookmark, idx, handleCurrentlyCooking }) => {
     );
 };
 
-Cart.propTypes = {
-    bookmark: PropTypes.object,
+NewCart.propTypes={
+    secondCart: PropTypes.object,
     idx: PropTypes.number,
-    handleCurrentlyCooking: PropTypes.func,
 }
 
-export default Cart;
+export default NewCart;

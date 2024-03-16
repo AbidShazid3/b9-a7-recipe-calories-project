@@ -21,6 +21,11 @@ function App() {
 
   }
 
+  const handleCartDelete= id=>{
+    const newCart = bookmarks.filter(item=> item.recipe_id != id);
+    setBookmarks(newCart);
+  }
+
 
   return (
     <>
@@ -34,7 +39,7 @@ function App() {
           </div>
           <div className='md:flex lg:flex mt-10 gap-7'>
             <Blogs handleWantCook={handleWantCook}></Blogs>
-            <Carts bookmarks={bookmarks}></Carts>
+            <Carts bookmarks={bookmarks} handleCartDelete={handleCartDelete}></Carts>
           </div>
         </div>
 
