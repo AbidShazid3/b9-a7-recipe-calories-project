@@ -29,7 +29,7 @@ function App() {
 
   return (
     <>
-      <div className='container mx-auto md:p-2 lg:px-7'>
+      <div className='container mx-auto p-2 md:p-2 lg:px-7'>
         <Navbar></Navbar>
         <Banner></Banner>
         <div>

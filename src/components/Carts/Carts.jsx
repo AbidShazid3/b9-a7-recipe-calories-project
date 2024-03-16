@@ -7,16 +7,19 @@ const Carts = ({ bookmarks, handleCartDelete }) => {
     const [secondCarts, setSecondCarts] = useState([]);
 
     const handleCurrentlyCooking = (cart) => {
-        
+
         handleCartDelete(cart.recipe_id);
         const isExistNew = secondCarts.find(item => item.recipe_id === cart.recipe_id);
         if (!isExistNew) {
             setSecondCarts([...secondCarts, cart]);
         }
+        else {
+            alert("already exist");
+        }
     }
 
     return (
-        <div className="w-1/3">
+        <div className="flex-1 md:flex-1 lg:flex-1">
             <div>
                 <h1 className="text-2xl text-center p-4">Want to cook: {bookmarks.length}</h1>
                 <table className="table">
@@ -36,7 +39,7 @@ const Carts = ({ bookmarks, handleCartDelete }) => {
                         key={idx}
                         idx={idx}
                         bookmark={bookmark}
-                        handleCurrentlyCooking={handleCurrentlyCooking} 
+                        handleCurrentlyCooking={handleCurrentlyCooking}
                     ></Cart>)
                 }
             </div>

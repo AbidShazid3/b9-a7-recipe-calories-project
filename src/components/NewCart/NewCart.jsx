@@ -5,7 +5,7 @@ const NewCart = ({secondCart, idx}) => {
     
     return (
         <div>
-            <div className="overflow-x-auto">
+            <div className="lg:overflow-x-auto">
                 <table className="table">
                     <tbody>
                         <tr>
