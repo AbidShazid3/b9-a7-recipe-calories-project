@@ -5,6 +5,8 @@ import Banner from './components/Banner/Banner'
 import Blogs from './components/Blogs/Blogs'
 import Carts from './components/Carts/Carts'
 import Navbar from './components/Navbar/Navbar'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function App() {
@@ -16,7 +18,7 @@ function App() {
       setBookmarks([...bookmarks, blog]);
     }
     else {
-      alert("already exist");
+      toast("Already exist");
     }
 
   }
@@ -42,7 +44,7 @@ function App() {
             <Carts bookmarks={bookmarks} handleCartDelete={handleCartDelete}></Carts>
           </div>
         </div>
-
+        <ToastContainer />
       </div>
     </>
   )
